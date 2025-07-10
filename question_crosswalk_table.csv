@@ -1,0 +1,31 @@
+Question_ID,Question_Text,Question_Type,2017_Column,2019_Column,2021_Column,2022_Column,2023_Column,2024_Column,Years_Available,Priority,Notes
+open_access_attitude,Making research articles open access should be common scholarly practice,Likert_5,,,Q2.7_1,Q2.11_1,Q2.10.a,Q12_1,4,High,Core trend indicator - highest consistency
+open_data_attitude,Making research data openly available should be common scholarly practice,Likert_5,,,Q2.7_2,Q2.11_2,Q2.10.b,Q12_2,4,High,Primary outcome measure for data sharing attitudes
+open_peer_review_attitude,Making peer review open should be common scholarly practice,Likert_5,,,,Q2.11_3,Q2.10.c,Q12_3,3,High,Introduced 2022 - good trend indicator
+preprinting_attitude,Preprinting should be common scholarly practice,Likert_5,,,,Q2.11_4,Q2.10.d,Q12_4,3,High,Tracks preprint adoption attitudes
+data_sharing_frequency,How often have you made your research data openly available?,Likert_4,Q2.2,,,,,,,1,Medium,Core behavioral measure - need equivalent in other years
+credit_for_sharing,Do you think researchers currently get sufficient credit for sharing data?,Multiple_Choice,,Q2.4,,Q3.2,,,2,Medium,Important motivational factor
+fair_principles_awareness,How familiar are you with FAIR data principles?,Multiple_Choice,,,,Q3.1_1,Q2.11.a,,2,Medium,Key knowledge indicator
+job_title,Which of the following job titles best applies to you?,Multiple_Choice,Q10.5,Q6.5,,Q2.6,Q2.6,Q7,5,High,Demographic - can be harmonized across years
+research_area,Which best describes your primary area of interest?,Multiple_Choice,,,Q2.4,Q2.7,Q2.7,Q8,4,High,Demographic - consistent categories
+publication_history,When did you last publish or submit a manuscript?,Multiple_Choice,,,Q2.1,Q2.3,Q2.1,Q4,4,Medium,Research activity indicator
+organization_type,Which type of organisation do you work in?,Multiple_Choice,,,,Q2.4,Q2.4,Q5,3,Medium,Institutional context
+funder_mandate_support,Should funders require data sharing for grants?,Likert_3,,Q2.2,,,,,1,Medium,Policy question - 2019 focus
+national_mandate_support,How supportive of a national data sharing mandate?,Likert_5,,Q2.3,,,,,1,Medium,Policy attitude indicator
+care_principles_awareness,How familiar are you with CARE principles?,Multiple_Choice,,,,Q3.1_2,,,1,Low,Ethical data governance awareness
+data_sharing_motivations,What circumstances would motivate you to share data?,Multiple_Select,Q2.3_*,,,,,,1,Low,Comprehensive motivation analysis - 2017 baseline
+data_sharing_effort,How much effort is required to make data reusable?,Likert_4,Q2.5,,,,,,1,Low,Barrier assessment - effort required
+data_ownership_before_pub,Who owns data before publication?,Multiple_Select,Q2.6_*,,,,,,1,Low,Ownership understanding - pre-publication
+data_ownership_after_pub,Who owns data after publication?,Multiple_Select,Q2.7_*,,,,,,1,Low,Ownership understanding - post-publication
+licensing_practices,Under what licenses have you made data available?,Multiple_Select,Q2.9_*,,,,,,1,Low,Licensing behavior - 2017 detailed
+repository_usage,Which repositories have you used?,Multiple_Select,Q6.2_*,,,,,,1,Low,Tool usage - 2017 comprehensive
+data_reuse_experience,Have you reused others' research data?,Binary,Q2.1,,,,,,,1,Medium,Reuse behavior - need equivalent in other years
+collaboration_patterns,Does your research involve collaboration?,Multiple_Select,,,Q2.6_*,,,,,1,Medium,Research context indicator
+open_science_all_outputs,Making all research outputs open should be common practice,Likert_5,,,Q2.7_3,,,,,1,Medium,Broader open science attitude
+institutional_support,How supportive is your institution of data sharing?,Likert_5,Q3.1_*,,,,,,1,Low,Institutional context - 2017 detailed
+funder_withhold_support,Should funders penalize non-sharing researchers?,Likert_3,,Q2.1,,,,,1,Medium,Policy enforcement attitude
+credit_mechanisms_citation,Full citation as credit mechanism,Binary,,Q2.5_1,,,,,1,Medium,Specific credit mechanism
+credit_mechanisms_coauthor,Co-authorship as credit mechanism,Binary,,Q2.5_2,,,,,1,Medium,Specific credit mechanism
+credit_mechanisms_acknowledgment,Simple acknowledgment as credit mechanism,Binary,,Q2.5_3,,,,,1,Medium,Specific credit mechanism
+credit_mechanisms_financial,Financial reward as credit mechanism,Binary,,Q2.5_4,,,,,1,Medium,Specific credit mechanism
+credit_mechanisms_career,Career consideration as credit mechanism,Binary,,Q2.5_5,,,,,1,Medium,Specific credit mechanism

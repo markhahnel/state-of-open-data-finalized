@@ -1,0 +1,227 @@
+{
+  "metadata": {
+    "generatedAt": "2025-07-10T11:00:00.000Z",
+    "totalFiles": 18,
+    "totalSize": 62297248,
+    "yearRange": [2017, 2024],
+    "dataDirectory": "/Users/markhahnel/Desktop/State of Open Data 10 Years/"
+  },
+  "files": [
+    {
+      "filename": "FINALOpenData2017anonrawdata20171110 (1).xlsx",
+      "year": 2017,
+      "type": "excel",
+      "size": 1190629,
+      "status": "valid",
+      "structure": {
+        "totalRows": 2352,
+        "totalColumns": 374,
+        "sheets": [
+          {
+            "name": "Open_Data_2017 (1)",
+            "rowCount": 2352,
+            "columnCount": 374
+          }
+        ]
+      }
+    },
+    {
+      "filename": "Open_Data_2017FINALQuestionnaire (1).docx",
+      "year": 2017,
+      "type": "documentation",
+      "size": 51925,
+      "status": "valid",
+      "content": "Survey questionnaire with 992 paragraphs, 88 question indicators"
+    },
+    {
+      "filename": "State+of+Open+Data+2018_August+7,+2018_11 22 (1).xlsx",
+      "year": 2018,
+      "type": "excel",
+      "size": 702938,
+      "status": "corrupted",
+      "issue": "0 worksheets found - file corrupted"
+    },
+    {
+      "filename": "State_of_Open_Data_2018_questionnaire (1).docx",
+      "year": 2018,
+      "type": "documentation",
+      "size": 43912,
+      "status": "valid",
+      "content": "Survey questionnaire with 422 paragraphs, 54 question indicators"
+    },
+    {
+      "filename": "SoOD_2019_rawdata_anon_FIGSHARE SHARED (1).txt",
+      "year": 2019,
+      "type": "csv",
+      "size": 12768696,
+      "status": "valid",
+      "structure": {
+        "totalRows": 9499,
+        "totalColumns": 186,
+        "format": "tab-delimited"
+      }
+    },
+    {
+      "filename": "SoOD_2019_rawdata_anon_FIGSHARE SHARED (1).xlsx",
+      "year": 2019,
+      "type": "excel",
+      "size": 5520054,
+      "status": "corrupted",
+      "issue": "0 worksheets found - file corrupted (TXT version available)"
+    },
+    {
+      "filename": "State_of_Open_Data_2019_FINAL (1).docx",
+      "year": 2019,
+      "type": "documentation",
+      "size": 36277,
+      "status": "valid",
+      "content": "Survey questionnaire with 467 paragraphs, 45 question indicators"
+    },
+    {
+      "filename": "SoOD_2020_questions_FINAL (1).docx",
+      "year": 2020,
+      "type": "documentation",
+      "size": 40767,
+      "status": "valid",
+      "content": "Survey questionnaire with 375 paragraphs, 26 question indicators",
+      "issue": "Missing corresponding data file"
+    },
+    {
+      "filename": "State of Open Data 2021_Master data_cleaned (1).xlsx",
+      "year": 2021,
+      "type": "excel",
+      "size": 9410910,
+      "status": "valid",
+      "structure": {
+        "totalRows": 21594,
+        "totalColumns": 201,
+        "note": "Multi-year dataset containing 2016-2021 data"
+      }
+    },
+    {
+      "filename": "State of Open Data 2022_data to share (1).xlsx",
+      "year": 2022,
+      "type": "excel",
+      "size": 18682155,
+      "status": "valid",
+      "structure": {
+        "totalRows": 28392,
+        "totalColumns": 217,
+        "note": "Largest dataset by responses"
+      }
+    },
+    {
+      "filename": "State_of_Open_Data_2022_FINAL (1).docx",
+      "year": 2022,
+      "type": "documentation",
+      "size": 39499,
+      "status": "valid",
+      "content": "Survey questionnaire with 432 paragraphs, 60 question indicators"
+    },
+    {
+      "filename": "Springer Nature_SOOD_clean_anonymised_data_2023_V1.xlsx",
+      "year": 2023,
+      "type": "excel",
+      "size": 3156852,
+      "status": "valid",
+      "structure": {
+        "totalRows": 6092,
+        "totalColumns": 114
+      }
+    },
+    {
+      "filename": "State_of_Open_Data_2023 survey flow-v4 (1).docx",
+      "year": 2023,
+      "type": "documentation",
+      "size": 70288,
+      "status": "valid",
+      "content": "Survey flow document with 476 paragraphs, 71 question indicators"
+    },
+    {
+      "filename": "State of Open Data 2024 - Data.xlsx",
+      "year": 2024,
+      "type": "excel",
+      "size": 2011456,
+      "status": "valid",
+      "structure": {
+        "totalRows": 5422,
+        "totalColumns": 62
+      }
+    },
+    {
+      "filename": "State of Open Data 2024 - Survey Flow.docx",
+      "year": 2024,
+      "type": "documentation",
+      "size": 43799,
+      "status": "valid",
+      "content": "Survey flow document with 307 paragraphs, 34 question indicators"
+    },
+    {
+      "filename": "AnonFullDataFigshareSurvey (1).xlsx",
+      "year": null,
+      "type": "excel",
+      "size": 7447936,
+      "status": "valid",
+      "structure": {
+        "totalRows": 2061,
+        "totalColumns": 120,
+        "note": "Year unknown - requires analysis"
+      }
+    },
+    {
+      "filename": "Master data_cleaned (1).xlsx",
+      "year": null,
+      "type": "excel",
+      "size": 8958437,
+      "status": "valid",
+      "structure": {
+        "totalRows": 18899,
+        "totalColumns": 151,
+        "note": "Multi-year dataset 2016-2020"
+      }
+    },
+    {
+      "filename": "SoOD_FINAL (1).docx",
+      "year": null,
+      "type": "documentation",
+      "size": 45076,
+      "status": "valid",
+      "content": "Survey questionnaire - year unknown"
+    }
+  ],
+  "summary": {
+    "byType": {
+      "excel": 9,
+      "documentation": 8,
+      "csv": 1
+    },
+    "byStatus": {
+      "valid": 15,
+      "corrupted": 2,
+      "missing": 1
+    },
+    "totalResponses": 73351,
+    "validYears": [2017, 2019, 2021, 2022, 2023, 2024],
+    "problematicYears": [2018, 2020],
+    "largestDataset": {
+      "filename": "State of Open Data 2022_data to share (1).xlsx",
+      "responses": 28392,
+      "columns": 217
+    }
+  },
+  "dataQuality": {
+    "completenessScore": 75,
+    "issues": [
+      "2018 Excel file corrupted",
+      "2019 Excel file corrupted (TXT backup available)",
+      "2020 data file missing",
+      "Potential duplicate data in combined datasets"
+    ],
+    "recommendations": [
+      "Recover or replace corrupted 2018 Excel file",
+      "Locate 2020 survey data file",
+      "Analyze multi-year datasets for overlapping data",
+      "Standardize file naming conventions"
+    ]
+  }
+}
