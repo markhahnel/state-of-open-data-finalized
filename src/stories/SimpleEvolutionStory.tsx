@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Play, Pause, RotateCcw, Share } from 'lucide-react';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, AreaChart, Area, BarChart, Bar } from 'recharts';
 
 interface StoryChapter {
   id: string;
@@ -157,6 +158,25 @@ const storyChapters: StoryChapter[] = [
   }
 ];
 
+// Sample data for charts
+const evolutionData = [
+  { year: 2017, fairAwareness: 31, openAccess: 65, openData: 23, collaboration: 45 },
+  { year: 2018, fairAwareness: 35, openAccess: 68, openData: 28, collaboration: 48 },
+  { year: 2019, fairAwareness: 41, openAccess: 71, openData: 34, collaboration: 52 },
+  { year: 2020, fairAwareness: 48, openAccess: 75, openData: 42, collaboration: 67 },
+  { year: 2021, fairAwareness: 55, openAccess: 78, openData: 49, collaboration: 72 },
+  { year: 2022, fairAwareness: 63, openAccess: 81, openData: 54, collaboration: 75 },
+  { year: 2023, fairAwareness: 71, openAccess: 84, openData: 58, collaboration: 78 },
+  { year: 2024, fairAwareness: 76, openAccess: 87, openData: 62, collaboration: 81 }
+];
+
+const barrierData = [
+  { barrier: 'Time Constraints', 2017: 73, 2019: 71, 2021: 68, 2024: 65 },
+  { barrier: 'Technical Skills', 2017: 67, 2019: 58, 2021: 49, 2024: 42 },
+  { barrier: 'Policy Uncertainty', 2017: 54, 2019: 48, 2021: 38, 2024: 28 },
+  { barrier: 'Lack of Support', 2017: 61, 2019: 55, 2021: 44, 2024: 35 }
+];
+
 export const SimpleEvolutionStory: React.FC = () => {
   const [currentChapter, setCurrentChapter] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -188,6 +208,131 @@ export const SimpleEvolutionStory: React.FC = () => {
     const url = `${window.location.origin}/stories/evolution?chapter=${currentChapter}`;
     navigator.clipboard.writeText(url);
     alert('Story URL copied to clipboard!');
+  };
+
+  const renderChart = () => {
+    const filteredData = chapter.year 
+      ? evolutionData.filter(d => d.year === chapter.year)
+      : chapter.timeRange 
+      ? evolutionData.filter(d => d.year >= chapter.timeRange![0] && d.year <= chapter.timeRange![1])
+      : evolutionData;
+
+    switch (currentChapter) {
+      case 0: // Introduction - Single year snapshot
+        return (
+          <ResponsiveContainer width="100%" height={300}>
+            <BarChart data={filteredData}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="year" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Bar dataKey="fairAwareness" fill="#3b82f6" name="FAIR Awareness %" />
+              <Bar dataKey="openAccess" fill="#10b981" name="Open Access %" />
+            </BarChart>
+          </ResponsiveContainer>
+        );
+      
+      case 1: // Early Growth - Comparison
+        return (
+          <ResponsiveContainer width="100%" height={300}>
+            <LineChart data={filteredData}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="year" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Line type="monotone" dataKey="fairAwareness" stroke="#3b82f6" strokeWidth={3} name="FAIR Awareness %" />
+              <Line type="monotone" dataKey="openAccess" stroke="#10b981" strokeWidth={3} name="Open Access %" />
+            </LineChart>
+          </ResponsiveContainer>
+        );
+      
+      case 2: // Tipping Point - Acceleration
+        return (
+          <ResponsiveContainer width="100%" height={300}>
+            <AreaChart data={filteredData}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="year" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Area type="monotone" dataKey="collaboration" stackId="1" stroke="#8b5cf6" fill="#8b5cf6" fillOpacity={0.6} name="Collaboration %" />
+              <Area type="monotone" dataKey="openData" stackId="1" stroke="#f59e0b" fill="#f59e0b" fillOpacity={0.6} name="Open Data %" />
+            </AreaChart>
+          </ResponsiveContainer>
+        );
+      
+      case 3: // Maturation - All metrics
+        return (
+          <ResponsiveContainer width="100%" height={300}>
+            <LineChart data={evolutionData}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="year" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Line type="monotone" dataKey="fairAwareness" stroke="#3b82f6" strokeWidth={2} name="FAIR Awareness %" />
+              <Line type="monotone" dataKey="openAccess" stroke="#10b981" strokeWidth={2} name="Open Access %" />
+              <Line type="monotone" dataKey="openData" stroke="#f59e0b" strokeWidth={2} name="Open Data %" />
+              <Line type="monotone" dataKey="collaboration" stroke="#8b5cf6" strokeWidth={2} name="Collaboration %" />
+            </LineChart>
+          </ResponsiveContainer>
+        );
+      
+      case 4: // Current State - Barriers declining
+        return (
+          <ResponsiveContainer width="100%" height={300}>
+            <BarChart data={barrierData} layout="horizontal">
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis type="number" />
+              <YAxis dataKey="barrier" type="category" width={100} />
+              <Tooltip />
+              <Legend />
+              <Bar dataKey="2017" fill="#ef4444" name="2017" />
+              <Bar dataKey="2024" fill="#22c55e" name="2024" />
+            </BarChart>
+          </ResponsiveContainer>
+        );
+      
+      case 5: // Future - Projections
+        const futureData = [
+          ...evolutionData,
+          { year: 2025, fairAwareness: 78, openAccess: 89, openData: 65, collaboration: 83 },
+          { year: 2026, fairAwareness: 80, openAccess: 91, openData: 68, collaboration: 85 },
+          { year: 2027, fairAwareness: 82, openAccess: 93, openData: 71, collaboration: 87 },
+          { year: 2028, fairAwareness: 84, openAccess: 94, openData: 73, collaboration: 89 },
+          { year: 2029, fairAwareness: 86, openAccess: 95, openData: 75, collaboration: 91 },
+          { year: 2030, fairAwareness: 88, openAccess: 96, openData: 77, collaboration: 93 }
+        ];
+        return (
+          <ResponsiveContainer width="100%" height={300}>
+            <AreaChart data={futureData}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="year" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Area type="monotone" dataKey="fairAwareness" stroke="#3b82f6" fill="#3b82f6" fillOpacity={0.3} name="FAIR Awareness % (Projected)" />
+              <Area type="monotone" dataKey="openData" stroke="#f59e0b" fill="#f59e0b" fillOpacity={0.3} name="Open Data % (Projected)" />
+            </AreaChart>
+          </ResponsiveContainer>
+        );
+      
+      default:
+        return (
+          <ResponsiveContainer width="100%" height={300}>
+            <LineChart data={evolutionData}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="year" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Line type="monotone" dataKey="fairAwareness" stroke="#3b82f6" strokeWidth={2} name="FAIR Awareness %" />
+            </LineChart>
+          </ResponsiveContainer>
+        );
+    }
   };
 
   return (
@@ -338,19 +483,16 @@ export const SimpleEvolutionStory: React.FC = () => {
           </div>
         </div>
 
-        {/* Visualization Placeholder */}
+        {/* Interactive Visualization */}
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Data Visualization</h3>
-          <div className="h-64 bg-gradient-to-r from-blue-100 to-blue-200 rounded-lg flex items-center justify-center">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">
-                {chapter.year || `${chapter.timeRange?.[0]}-${chapter.timeRange?.[1]}`}
-              </div>
-              <p className="text-blue-800">Interactive Chart Placeholder</p>
-              <p className="text-sm text-blue-600 mt-2">
-                Evolution timeline visualization would appear here
-              </p>
-            </div>
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">
+            Data Visualization - {chapter.year || `${chapter.timeRange?.[0]}-${chapter.timeRange?.[1]}`}
+          </h3>
+          <div className="h-80">
+            {renderChart()}
+          </div>
+          <div className="mt-4 text-sm text-gray-600">
+            <p>📊 Interactive chart showing evolution of open data attitudes over time</p>
           </div>
         </div>
       </div>
