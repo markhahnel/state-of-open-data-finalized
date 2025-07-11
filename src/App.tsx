@@ -1,7 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { SimplePersonasStory } from './stories/SimplePersonasStory';
+import { SimpleEvolutionStory } from './stories/SimpleEvolutionStory';
 
-// Simple demo components to showcase the finalization features
+// Dashboard component to showcase the finalization features
 const Dashboard = () => (
   <div className="p-8">
     <h1 className="text-3xl font-bold mb-6">State of Open Data - Finalized Application</h1>
@@ -99,63 +101,7 @@ const Dashboard = () => (
   </div>
 );
 
-const EvolutionStory = () => (
-  <div className="p-8">
-    <h1 className="text-3xl font-bold mb-4">Evolution of Open Data Attitudes</h1>
-    <div className="bg-blue-50 p-6 rounded-lg mb-6">
-      <p className="text-blue-800">
-        📖 This is the Evolution Story component with interactive chapters (2017-2030).
-        Features include auto-advance playback, chapter navigation, and shareable URLs.
-      </p>
-    </div>
-    <div className="space-y-4">
-      <div className="p-4 border border-gray-200 rounded">
-        <h3 className="font-semibold">Chapter 1: The Beginning (2017)</h3>
-        <p className="text-gray-600">FAIR awareness at 31%, setting the foundation for change...</p>
-      </div>
-      <div className="p-4 border border-gray-200 rounded">
-        <h3 className="font-semibold">Chapter 2: Early Growth (2017-2019)</h3>
-        <p className="text-gray-600">34% increase in FAIR awareness, momentum building...</p>
-      </div>
-      <div className="p-4 border border-gray-200 rounded">
-        <h3 className="font-semibold">Chapter 3: The Tipping Point (2019-2021)</h3>
-        <p className="text-gray-600">Pandemic accelerated adoption, 78% open science support...</p>
-      </div>
-    </div>
-    <Link to="/" className="inline-block mt-6 text-blue-600 hover:text-blue-800">← Back to Dashboard</Link>
-  </div>
-);
-
-const PersonasStory = () => (
-  <div className="p-8">
-    <h1 className="text-3xl font-bold mb-4">Researcher Personas</h1>
-    <div className="bg-green-50 p-6 rounded-lg mb-6">
-      <p className="text-green-800">
-        👥 Four distinct researcher archetypes with characteristics, motivations, and evolution tracking.
-        Switch between overview, comparison, and evolution views.
-      </p>
-    </div>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div className="p-4 border border-gray-200 rounded">
-        <h3 className="font-semibold text-blue-600">FAIR Champion (38%)</h3>
-        <p className="text-gray-600">Early adopter & advocate, 95% FAIR awareness</p>
-      </div>
-      <div className="p-4 border border-gray-200 rounded">
-        <h3 className="font-semibold text-green-600">Pragmatic Complier (49%)</h3>
-        <p className="text-gray-600">Mainstream adopter, 75% FAIR awareness</p>
-      </div>
-      <div className="p-4 border border-gray-200 rounded">
-        <h3 className="font-semibold text-yellow-600">Cautious Observer (28%)</h3>
-        <p className="text-gray-600">Late majority, 45% FAIR awareness</p>
-      </div>
-      <div className="p-4 border border-gray-200 rounded">
-        <h3 className="font-semibold text-red-600">Traditionalist (13%)</h3>
-        <p className="text-gray-600">Resistant to change, 25% FAIR awareness</p>
-      </div>
-    </div>
-    <Link to="/" className="inline-block mt-6 text-blue-600 hover:text-blue-800">← Back to Dashboard</Link>
-  </div>
-);
+// Using the actual interactive components
 
 function App() {
   return (
@@ -189,8 +135,8 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Dashboard />} />
-          <Route path="/stories/evolution" element={<EvolutionStory />} />
-          <Route path="/stories/personas" element={<PersonasStory />} />
+          <Route path="/stories/evolution" element={<SimpleEvolutionStory />} />
+          <Route path="/stories/personas" element={<SimplePersonasStory />} />
         </Routes>
       </div>
     </Router>
